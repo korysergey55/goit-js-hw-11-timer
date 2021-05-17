@@ -29,10 +29,10 @@ class CountdownTimer {
   }
   changeDate() {
     const time = this.targetDate.getTime() - new Date().getTime();
-    if(time > 0){
-    this.getTimeComponents(time);
-    } else{
-    this.timeEnd();
+    if (time > 0) {
+      this.getTimeComponents(time);
+    } else {
+      this.timeEnd();
     }
   }
   getTimeComponents(time) {
@@ -64,4 +64,3 @@ const timerClass = new CountdownTimer({
 });
 
 timerClass.runTimer();
-
