@@ -14,16 +14,16 @@ class CountdownTimer {
 
     this.refs = {
       daysElem: document.querySelector(
-        `${this.selector} span[data-value='days']`
+        `${this.selector} [data-value='days']`
       ),
       hoursElem: document.querySelector(
-        `${this.selector} span[data-value='hours']`
+        `${this.selector} [data-value='hours']`
       ),
       minsElem: document.querySelector(
-        `${this.selector} span[data-value='mins']`
+        `${this.selector} [data-value='mins']`
       ),
       secsElem: document.querySelector(
-        `${this.selector} span[data-value='secs']`
+        `${this.selector} [data-value='secs']`
       ),
     };
   }
@@ -58,9 +58,9 @@ class CountdownTimer {
     document.querySelector(this.selector).textContent = "Время акции истекло";
   }
 }
-const timerClass = new CountdownTimer({
+const myTimer = new CountdownTimer({
   selector: "#timer-1",
-  targetDate: new Date("Jun 1, 2021"),
+  targetDate: new Date("Jun 1, 2022"),
 });
 
-timerClass.runTimer();
+myTimer.runTimer();
